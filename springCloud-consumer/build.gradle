@@ -1,3 +1,4 @@
 dependencies{
 	compile "com.cleverbo:springCloud-api:${project.version}"
+	compile 'org.springframework.boot:spring-boot-starter-web'
 }
