@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cleverbo.dao.ClassesDao">
+	<select id="queryById" resultType = "ClassesEntity" parameterType = "Long">
+		select id , classes_name, db_source from classes where id = #{id, jdbcType=NUMERIC}
+	</select>
+	<select id="queryAll" resultType = "ClassesEntity" >
+		select id , classes_name, db_source from classes
+	</select>
+	<insert id="insertClasses" parameterType = "ClassesEntity" >
+		insert into classes(id , classes_name, db_source) values (#{id},#{classesName},(select current_database()))
+	</insert>
+</mapper>

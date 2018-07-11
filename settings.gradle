@@ -1,0 +1,9 @@
+
+
+include 'springCloud-api'
+include 'springCloud-provider'
+include 'springCloud-consumer'
+include 'springCloud-eureka'
+
+//project(':springCloud-api').projectDir  = new File(settingsDir,'../springCloud-api')
+//project(':springCloud-provider').projectDir  = new File(settingsDir,'../springCloud-provider')
