@@ -1,11 +1,11 @@
+#集群版eureka配置
 server:
-  port: 7010
-  
+  port: 7020
 eureka:
   instance:
-    hostname: localhost
+    hostname: eureka7020
   client:
     register-with-eureka: false # 表示不向注册中心注册自己
     fetch-registry: false #表示自己就是注册中心，负责维护服务，不需要检索服务
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #设置eureka的注册和查询地址
+      defaultZone: http://eureka7010:7010/eureka/,http://eureka7030:7030/eureka/ #设置eureka的注册和查询地址

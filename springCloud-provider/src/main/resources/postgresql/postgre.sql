@@ -14,15 +14,15 @@ CREATE TABLE "public"."classes" (
 WITH (OIDS=FALSE)
 
 ;
-COMMENT ON COLUMN "public"."classes"."classes_name" IS '°à¼¶Ãû³Æ';
-COMMENT ON COLUMN "public"."classes"."db_source" IS 'Êı¾İÔ´';
+COMMENT ON COLUMN "public"."classes"."classes_name" IS 'ç­çº§åç§°';
+COMMENT ON COLUMN "public"."classes"."db_source" IS 'æ•°æ®æº';
 
 -- ----------------------------
 -- Records of classes
 -- ----------------------------
-INSERT INTO "public"."classes" VALUES ('1', 'Ò»Äê¼¶', (select current_database()));
-INSERT INTO "public"."classes" VALUES ('2', '¶şÄê¼¶', (select current_database()));
-INSERT INTO "public"."classes" VALUES ('3', 'ÈıÄê¼¶', (select current_database()));
+INSERT INTO "public"."classes" VALUES ('1', 'ä¸€å¹´çº§', (select current_database()));
+INSERT INTO "public"."classes" VALUES ('2', 'äºŒå¹´çº§', (select current_database()));
+INSERT INTO "public"."classes" VALUES ('3', 'ä¸‰å¹´çº§', (select current_database()));
 -- ----------------------------
 -- Indexes structure for table classes
 -- ----------------------------

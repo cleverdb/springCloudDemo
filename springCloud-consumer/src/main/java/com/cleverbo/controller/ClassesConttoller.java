@@ -23,7 +23,11 @@ import com.cleverbo.entity.ClassesEntity;
 @RestController
 @RequestMapping(value = "/consumer/classes")
 public class ClassesConttoller {
-	private static final String REST_URL = "http://localhost:8010";
+	
+	//原始restApi方式访问
+//	private static final String REST_URL = "http://localhost:8010";
+	//eureka+ribbon访问方式 (http://+应用名称(spring.application.name))
+	private static final String REST_URL = "http://SPRINGAPPLICATIONNAME-SPRINGCLOUD-PROVIDER";
 	@Autowired
 	private RestTemplate restTemplate;
 	

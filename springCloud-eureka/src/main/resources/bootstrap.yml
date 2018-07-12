@@ -1,0 +1,9 @@
+
+eureka: 
+  environment: cloud # 修改默认名称test
+  datacenter : cloud # 修改默认名称default
+  
+spring:
+  application:
+    name: springcloud
+      

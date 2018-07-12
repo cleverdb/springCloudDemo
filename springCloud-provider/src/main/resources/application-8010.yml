@@ -19,7 +19,7 @@ logging:
     
 spring:
   application:
-    name: springCloud-provider
+    name: springApplicationName-springCloud-provider # 消费者调用服务的名称,多个provider必须都保证一样
   datasource:
 #建议先配置 driver-class-name和type，否则可能抛出：Cannot determine embedded database driver class for database type NONE
     driver-class-name: org.postgresql.Driver
@@ -38,8 +38,8 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7010/eureka
+      defaultZone: http://eureka7010:7010/eureka,http://eureka7020:7020/eureka,http://eureka7030:7030/eureka
   instance:
-    instance-id: springCloud-provider # 修改默认的服务名称 ：localhost:pringCloud-provider
+    instance-id: springCloud-provider-8010 #修改页面默认的Status名称 ：localhost:pringCloud-provider
     prefer-ip-address: true #访问路径显示ip地址
       
