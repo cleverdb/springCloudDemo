@@ -1,0 +1,45 @@
+debug: true
+
+server:
+  port: 8010
+
+mybatis:
+# config-location: classpath:mybatis/mybatisConfig.xml
+  type-aliases-package: com.cleverbo.entity
+  mapper-locations:
+  - classpath:mybatis/mappers/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true 
+    
+logging:
+  level:
+    com.cleverbo.dao: debug
+    
+    
+spring:
+  application:
+    name: springApplicationName-springCloud-provider # 消费者调用服务的名称,多个provider必须都保证一样
+  datasource:
+#建议先配置 driver-class-name和type，否则可能抛出：Cannot determine embedded database driver class for database type NONE
+    driver-class-name: org.postgresql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/springCloud01
+    username: postgres
+    password: 123456
+#   hikari:
+#     driver-class-name: org.postgresql.Driver
+#     jdbc-url: jdbc:postgresql://localhost:5432/springCloud01
+#     username: root
+#     password: 123456
+#     maximum-pool-size: 10
+
+#注册服务
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7010:7010/eureka,http://eureka7020:7020/eureka,http://eureka7030:7030/eureka
+  instance:
+    instance-id: springCloud-provider-8010-hystrix #修改页面默认的Status名称 ：localhost:pringCloud-provider
+    prefer-ip-address: true #访问路径显示ip地址
+      

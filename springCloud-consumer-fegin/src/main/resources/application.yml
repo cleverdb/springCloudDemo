@@ -1,0 +1,13 @@
+server:
+  port: 8070
+ 
+# 开启hystrix 
+feign: 
+  hystrix: 
+    enabled: true
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7010:7010/eureka,http://eureka7020:7020/eureka,http://eureka7030:7030/eureka
+    register-with-eureka: false #不注册自己

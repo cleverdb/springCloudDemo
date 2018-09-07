@@ -22,7 +22,7 @@ import com.cleverbo.service.ClassesService;
 
 @RestController
 @RequestMapping(value = "/classes")
-public class ClassesConttoller {
+public class ClassesController {
 	
 	@Autowired
 	private CacheManager cacheManager;
@@ -35,8 +35,8 @@ public class ClassesConttoller {
 	}
 	@GetMapping(value= "/get/{id}")
 	public ClassesEntity get(@PathVariable("id") Long id) {
-		Cache cache = cacheManager.getCache("test");
-		cache.get("-247446376:3523116898:com.cleverbo.dao.ClassesDao.queryById:0:2147483647:select id , classes_name, db_source from classes where id = ?:1:SqlSessionFactoryBean", ClassesEntity.class);
+//		Cache cache = cacheManager.getCache("test");
+//		cache.get("-247446376:3523116898:com.cleverbo.dao.ClassesDao.queryById:0:2147483647:select id , classes_name, db_source from classes where id = ?:1:SqlSessionFactoryBean", ClassesEntity.class);
 		ClassesEntity entity = classesSevice.get(id);
 		return entity;
 	}

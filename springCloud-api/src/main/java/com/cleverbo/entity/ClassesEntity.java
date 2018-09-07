@@ -2,19 +2,10 @@ package com.cleverbo.entity;
 
 import java.io.Serializable;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.experimental.Accessors;
-
 /**
  * @author V.Bo.Dong
  *
  */
-@AllArgsConstructor
-@NoArgsConstructor
-@Data
-@Accessors(chain = true)
 public class ClassesEntity implements Serializable {
 	/**
 	 * 
@@ -26,4 +17,24 @@ public class ClassesEntity implements Serializable {
 	private String ClassesName;
 	//数据源
 	private String dbSource;
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getClassesName() {
+		return ClassesName;
+	}
+	public void setClassesName(String classesName) {
+		ClassesName = classesName;
+	}
+	public String getDbSource() {
+		return dbSource;
+	}
+	public void setDbSource(String dbSource) {
+		this.dbSource = dbSource;
+	}
+	
+	
 }

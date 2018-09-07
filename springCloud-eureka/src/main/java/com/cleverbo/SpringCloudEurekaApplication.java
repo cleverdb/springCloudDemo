@@ -12,9 +12,9 @@ import org.springframework.test.context.ActiveProfiles;
 @SpringBootApplication
 @EnableEurekaServer
 //@EnableAutoConfiguration
-@ActiveProfiles(value = "7010")
+//@ActiveProfiles(value = "7010")
 //@ActiveProfiles(value = "7020")
-//@ActiveProfiles(value = "7030")
+@ActiveProfiles(value = "7030")
 public class SpringCloudEurekaApplication {
 
 	public static void main(String[] args) {

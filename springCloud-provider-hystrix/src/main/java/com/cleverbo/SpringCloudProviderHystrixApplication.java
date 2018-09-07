@@ -14,10 +14,11 @@ import org.springframework.test.context.ActiveProfiles;
 @SpringBootApplication
 @EnableCaching
 @EnableEurekaClient
-@ActiveProfiles("8010")
-public class SpringCloudProviderApplication {
+@ActiveProfiles("8020")
+@EnableHystrix
+public class  SpringCloudProviderHystrixApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCloudProviderApplication.class, args);
+		SpringApplication.run(SpringCloudProviderHystrixApplication.class, args);
 	}
 }
